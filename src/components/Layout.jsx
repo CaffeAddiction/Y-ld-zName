@@ -14,7 +14,7 @@ export default function Layout() {
   return (
     <div className="relative z-10 min-h-screen flex flex-col">
       {/* Top Bar */}
-      <header className="glass sticky top-0 z-30 px-4 py-3 flex items-center justify-between">
+      <header className="glass sticky top-0 z-30 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-2xl animate-spin-slow">🌙</span>
           <h1
@@ -40,14 +40,14 @@ export default function Layout() {
 
       {/* Content */}
       <main className="flex-1 pb-24">
-        <div className="max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto w-full px-5 sm:px-8 py-4">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 py-4">
           <Outlet />
         </div>
       </main>
 
       {/* Bottom Nav */}
       <nav className="fixed bottom-0 left-0 right-0 z-30 glass">
-        <div className="max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto flex justify-around items-center py-2 px-4">
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 flex justify-around items-center py-2">
           {navItems.map(item => {
             const isActive =
               location.pathname === item.path ||

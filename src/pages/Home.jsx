@@ -83,7 +83,7 @@ export default function Home() {
         </h3>
       </div>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 md:gap-4">
+      <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3 md:gap-4">
         {zodiacSigns.map((sign, index) => (
           <button
             key={sign.id}
